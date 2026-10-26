@@ -1,0 +1,150 @@
+
+.studio {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.studio__header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.studio__eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #a78bfa;
+}
+
+.studio__header h1 {
+  font-size: clamp(30px, 5vw, 52px);
+  margin: 12px 0;
+}
+
+.studio__header p {
+  color: #a1a1aa;
+}
+
+.studio__panel {
+  padding: 30px;
+  background: #18181b;
+  border: 1px solid #3f3f46;
+  border-radius: 20px;
+}
+
+.studio__panel h2 {
+  margin: 0 0 24px;
+}
+
+.drum-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.drum-pad {
+  min-height: 150px;
+  border: 1px solid #52525b;
+  border-radius: 16px;
+  background: #27272a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.12s, background 0.12s;
+}
+
+.drum-pad:hover {
+  background: #3f3f46;
+}
+
+.drum-pad:focus-visible {
+  outline: 3px solid #a78bfa;
+  outline-offset: 4px;
+}
+
+.drum-pad--active {
+  background: #6d28d9;
+  border-color: #c4b5fd;
+  transform: scale(0.97);
+}
+
+.drum-pad__key {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.drum-pad__name {
+  font-size: 14px;
+  color: #d4d4d8;
+}
+
+.studio__status {
+  margin-top: 24px;
+  color: #c4b5fd;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .studio {
+    padding: 24px 12px;
+  }
+
+  .studio__panel {
+    padding: 16px;
+  }
+
+  .drum-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .drum-pad {
+    min-height: 110px;
+  }
+}
+
+
+
+
+
+
+.drum-pad {
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.drum-pad:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 375px) {
+  .studio__header h1 {
+    font-size: 28px;
+  }
+
+  .studio__panel {
+    padding: 14px;
+  }
+
+  .drum-grid {
+    gap: 10px;
+  }
+
+  .drum-pad {
+    min-height: 105px;
+  }
+
+  .drum-pad__key {
+    font-size: 28px;
+  }
+
+  .drum-pad__name {
+    font-size: 12px;
+    text-align: center;
+  }
+}
